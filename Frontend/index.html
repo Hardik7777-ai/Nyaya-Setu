@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyaya-Setu | AI Legal Triage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="app-header">
+            <h1 class="brand">⚖️ Nyaya-Setu</h1>
+            <p class="subtitle">Semantic Legal Interpretation Engine</p>
+        </header>
+
+        <main class="io-section">
+            <div class="input-group">
+                <label for="legalInput">Unstructured Legal Text</label>
+                <textarea id="legalInput" placeholder="Paste legal notice, contract clause, or court order here..."></textarea>
+            </div>
+            
+            <div class="control-group">
+                <select id="langSelect" class="form-select">
+                    <option value="English">Translate -> English</option>
+                    <option value="Hindi">Translate -> Hindi</option>
+                </select>
+                <button id="analyzeBtn" class="btn-primary">Run Analysis Pipeline</button>
+            </div>
+
+            <div class="output-group">
+                <label>Inference Results</label>
+                <div id="loadingIndicator" class="hidden pulse-text">Querying LLM Backend...</div>
+                <pre id="outputResult" class="code-block">Awaiting input...</pre>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
